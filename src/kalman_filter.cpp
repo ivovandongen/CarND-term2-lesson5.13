@@ -1,10 +1,8 @@
 #include "kalman_filter.h"
 
-KalmanFilter::KalmanFilter() {
-}
+KalmanFilter::KalmanFilter() = default;
 
-KalmanFilter::~KalmanFilter() {
-}
+KalmanFilter::~KalmanFilter() = default;
 
 void KalmanFilter::Predict() {
     x_ = F_ * x_;
@@ -27,4 +25,3 @@ void KalmanFilter::Update(const VectorXd &z) {
     MatrixXd I = MatrixXd::Identity(x_size, x_size);
     P_ = (I - K * H_) * P_;
 }
-

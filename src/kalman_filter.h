@@ -1,5 +1,6 @@
 #ifndef KALMAN_FILTER_H_
 #define KALMAN_FILTER_H_
+
 #include "Dense"
 
 using Eigen::MatrixXd;
@@ -51,4 +52,3 @@ public:
 };
 
 #endif /* KALMAN_FILTER_H_ */
-
